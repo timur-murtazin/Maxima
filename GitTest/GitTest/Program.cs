@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace GitTest
+{
+    public class Program
+    {
+        public class void Main(string[] args)
+        {
+            string a1 = "Hello";
+            string a2 = "Hello";
+            Console.WriteLine(a1 == a2);
+        }
+    }
+}
+    
+ 
+   
