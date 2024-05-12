@@ -4,23 +4,22 @@
     {
         public static void Main()
         {
-            string x = "1";
-            int y;
+            string base_number;
+            int modify_number;
             Console.Write("Введите число: ");
-            x = Console.ReadLine();
-            //Console.WriteLine(x);
-            y = Convert.ToInt32(x);
-            isPalindrom(y);
+            base_number = Console.ReadLine();
+            modify_number = Convert.ToInt32(base_number);
+            isPalindrom(modify_number);
         }
 
         public static Boolean isPalindrom(Int32 number)
         {
-            char[] n1 = number.ToString().ToCharArray();
-            char[] n2 = number.ToString().ToCharArray();
-            Array.Reverse(n2);
+            char[] base_char = number.ToString().ToCharArray();
+            char[] modify_char = number.ToString().ToCharArray();
+            Array.Reverse(modify_char);
 
-            String s1 = new String(n1);
-            String s2 = new String(n2);
+            String s1 = new String(base_char);
+            String s2 = new String(modify_char);
 
             if (s1 == s2) 
             {
