@@ -10,9 +10,19 @@
             base_number = Console.ReadLine();
             modify_number = Convert.ToInt32(base_number);
             isPalindrom(modify_number);
+
+            int Num = default, reverseNum = default, NumCopy = default;  //решение как надо, математический метод
+            Num = Convert.ToInt32(base_number);                          
+
+            while (Num != 0)
+            {
+                reverseNum = reverseNum*10 + Num%10;
+                Num /= 10;
+            }
+            Console.WriteLine (NumCopy == reverseNum);                  //
         }
 
-        public static Boolean isPalindrom(Int32 number)
+        public static Boolean isPalindrom(Int32 number)                 //решение через строковые значения
         {
             char[] base_char = number.ToString().ToCharArray();
             char[] modify_char = number.ToString().ToCharArray();
