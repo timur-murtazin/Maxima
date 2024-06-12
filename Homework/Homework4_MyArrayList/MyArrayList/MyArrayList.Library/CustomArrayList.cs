@@ -3,32 +3,32 @@ using System;
 
 namespace MyArrayList.Library
 {
-    public class CustomArrayList
+    public class CustomArrayList<T> where T : IComparable<T>
     {
-        private int[] _array;
+        private T[] _array;
         private int _length;
 
         public int Count { get; private set; }
 
         public CustomArrayList()
         {
-            _array = new int[4];
+            _array = new T[4];
             _length = _array.Length;
         }
 
-        public CustomArrayList(int element)
+        public CustomArrayList(T element)
         {
-            _array = new int[4];
+            _array = new T[4];
             _array[0] = element;
 
             _length = _array.Length;
             Count++;
         }
 
-        public CustomArrayList(int[] elements)
+        public CustomArrayList(T[] elements)
         {
-            var arrayLength = (int)((elements.Length * 1.5) + elements.Length);
-            _array = new int[arrayLength];
+            int arrayLength = (int)((elements.Length * 1.5) + elements.Length);
+            _array = new T[arrayLength];
 
             for (int i = 0; i < elements.Length; i++)
             {
@@ -43,7 +43,7 @@ namespace MyArrayList.Library
         /// Добавление одного элемента
         /// </summary>
         /// <param name="element"></param>
-        public void Add(int element)
+        public void Add(T element)
         {
             _array[Count] = element;
             Count++;
@@ -53,7 +53,7 @@ namespace MyArrayList.Library
         /// Добавление массива элементов
         /// </summary>
         /// <param name="element"></param>
-        public void Add(int[] element)
+        public void Add(T[] element)
         {
             int temp = default;
             int temp2 = default;
