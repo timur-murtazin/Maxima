@@ -3,7 +3,7 @@ using System;
 
 namespace MyArrayList.Library
 {
-    public class CustomArrayList<T> where T : IComparable<T>
+    public class CustomArrayList<T>
     {
         private T[] _array;
         private int _length;
