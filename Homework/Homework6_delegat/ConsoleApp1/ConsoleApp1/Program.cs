@@ -146,7 +146,7 @@ public class Program
     public static string StrUp(string str)
     {
         string strUp = default;
-        //strUp = str.ToUpper;
+        strUp = str.ToUpper();
         return strUp;
     }
 
